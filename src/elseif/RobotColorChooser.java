@@ -26,27 +26,34 @@ public class RobotColorChooser {
 		//2. set the pen width to 10
 		
 	    //1. make the robot draw a shape (this will take more than one line of code)
-Robot rob = new Robot();
-rob.setSpeed(25);
-rob.penDown();
-rob.setPenWidth(10);
+
+		
+		Robot rob = new Robot();
+
+
 if(color == 0) {
 	rob.setPenColor(225,0,0);
 }
 if(color == 1) {
 	rob.setPenColor(0,0,225);
 }
-if(color == 1) {
+if(color == 2) {
 	rob.setPenColor(0,225,0);
 }
 else {
-int	rand = new Random().nextInt(2);
+rob.setRandomPenColor();
 }
-
+rob.setSpeed(25);
+rob.penDown();
+rob.setPenWidth(10);
+for(int i = 0; i<8; i++) {
+rob.move(100);
+rob.turn(45);
 
 }
 
 	
 	}
+}
 	
 
